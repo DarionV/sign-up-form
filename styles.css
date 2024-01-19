@@ -5,8 +5,7 @@
 }
 :root{
     font-size: 14px;
-    --red: rgb(235, 162, 162);
-    --blue: rgb(147, 147, 171);
+    --lobster: rgb(242, 141, 141);
 }
 
 body{
@@ -14,8 +13,10 @@ body{
     overflow: hidden;
     height: 100vh;
 }
+
 .hero-image{
-    background-color: var(--blue);
+    background: url(images/lobster.jpeg);
+    background-size: cover;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -24,10 +25,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: coral;
-    height: 148px;
-    margin-top: 132px;
-    font-size: 3rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 170px;
+    margin-top: 112px;
+    font-size: 4rem;
+    font-family: 'Italiana', sans-serif;
+    color: rgb(44, 44, 44);
 }
 .content{
     display: flex;
@@ -38,13 +41,19 @@ body{
 .hero-text{
     height: 280px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 64px;
-    align-items: center;
+    gap: 24px;
     font-size: 1.2rem;
+    color: rgb(48, 48, 48);
+}
+
+.italic{
+    font-style: italic;
 }
 .form{
-    background-color: rgb(237, 237, 237);
+    background-color: rgb(255, 255, 255);
     padding: 24px 0px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.206);
 }
@@ -52,25 +61,31 @@ form {
     display: flex;
     flex-direction: column;
     width: 70%;
-    overflow:auto;
+    font-size: 0.9rem;
 }
 .form > * {
-    margin-left: 20px;
+    margin-left: 64px;
 }
 input {
  margin-bottom: 24px;
  margin-right: 50px;
+ margin-top: 4px;
  height: 28px;
  padding-left: 6px;
  border: solid 1px rgb(178, 178, 178);
  border-radius: 4px;
 }
+input:focus {
+    border: 1px solid var(--lobster);
+    outline: none;
+}
+
 .form>h2{
     margin-bottom: 24px;
+    font-family: 'Merriweather', serif;
 }
 .footer{
     margin-top: auto;
-    background-color: beige;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,25 +93,35 @@ input {
 }
 .create-account-button{
     border: none;
-    width: 250px;
-    height: 50px;
-    background-color: aquamarine;
+    width: 200px;
+    height: 42px;
+    background-color: var(--lobster);
     border-radius: 8px;
-    margin: 24px 24px;
-    font-size: 1.2rem;
+    margin: 24px 64px;
     cursor: pointer;
+    font-family: 'Merriweather', serif;
+    color: white;
 }
-.log-in{
+
+.create-account-button:hover{
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.log-in {
     display: flex;
-    margin-left: 24px;
+    margin-left: 64px;
     align-items: center;
+    font-family: 'Merriweather', serif;
 }
 .log-in-button{
     border: none;
     margin-left: 12px;
     background: none;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-family: 'Merriweather', serif;
+    color: var(--lobster);
+}
+.log-in-button:hover{
+    text-decoration: underline;
 }
 .input{
     display: flex;
@@ -105,4 +130,21 @@ input {
 }
 .row{
     display: flex;
+}
+
+.clause{
+    font-size: 0.8rem;
+    font-style: italic;
+    opacity: 70%;
+}
+
+.credits {
+    color: white;
+}
+
+.bullet {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    opacity: 70%;
 }
