@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Merriweather&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="hero-image">
@@ -29,22 +30,22 @@
 
         <div class="form">
             <h2>It's lobster time!</h2>
-            <form action="" method="post">
+            <form action="" method="post" id="form">
                 <div class="row">
                     <div class="input">
                         <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="first-name">
+                        <input type="text" id="first-name" required>
                     </div>
                     <div class="input">
                         <label for="last-name">LAST NAME</label>
-                        <input type="text" id="last-name">
+                        <input type="text" id="last-name" required>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="input">
                         <label for="email">EMAIL</label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" required>
                     </div>
                     
                     <div class="input">
@@ -56,19 +57,21 @@
                 <div class="row">
                     <div class="input">
                         <label for="password">PASSWORD</label>
-                        <input type="password" name="password" id="password">
+                        <input type="password" name="password" id="password" required>
                     </div>
                     
                     <div class="input">
                         <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input type="password" name="confirm-password" id="confirm-password">
+                        <input type="password" name="confirm-password" id="confirm-password" required>
                     </div>
                 </div>
 
-            </form>
+            
         </div>
 
-        <button class="create-account-button">Create a lobster account</button>
+        <button type="submit" class="create-account-button">Create account</button>
+
+    </form>
         
         <div class="log-in">
             <p>Already have an account?</p>

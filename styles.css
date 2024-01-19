@@ -76,8 +76,12 @@ input {
  border-radius: 4px;
 }
 input:focus {
-    border: 1px solid var(--lobster);
+    border: 1px solid rgb(163, 194, 255);
     outline: none;
+}
+
+form.submitted input:invalid{
+    border-color: var(--lobster);
 }
 
 .form>h2{
@@ -93,7 +97,7 @@ input:focus {
 }
 .create-account-button{
     border: none;
-    width: 200px;
+    width: 160px;
     height: 42px;
     background-color: var(--lobster);
     border-radius: 8px;
